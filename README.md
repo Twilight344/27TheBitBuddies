@@ -34,3 +34,7 @@ Then in a new terminal ( make sure you are in root directory )
 `python email_reader.py`
 Create an other new terminal ( again make sure you are in root directroy )
 `python whatsapp_server.py`
+put http://127.0.0.1:5000/dashboard in your browser and you will view the page.
+Employee id: emp123
+password: password
+you are good to go after this and will be able to view the live page.
