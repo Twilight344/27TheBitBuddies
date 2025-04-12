@@ -24,3 +24,5 @@ This project is a centralized query management system that receives queries thro
 | HTML/CSS/JS    | Audit dashboard and UI (optional)       |
 
 ---
+## 🚀 To run the project 
+`cd admin_pannel`
