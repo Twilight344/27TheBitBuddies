@@ -1,0 +1,93 @@
+[
+    {
+        "id": "issue_1744399780771_whatsapp",
+        "source": "whatsapp",
+        "from": "whatsapp:+916360826605",
+        "subject": "WhatsApp Message",
+        "body": "Hey",
+        "category": "Genral Enquiry",
+        "timestamp": "2025-04-12T00:48:35.753818",
+        "status": "pending",
+        "email": "Not specified",
+        "resolved_by": null,
+        "resolved_at": null
+    },
+    {
+        "id": "issue_1744399780771_whatsapp",
+        "source": "whatsapp",
+        "from": "whatsapp:+916360826605",
+        "subject": "WhatsApp Message",
+        "body": "Hii",
+        "category": "Genral Enquiry",
+        "timestamp": "2025-04-12T00:55:33.834216",
+        "status": "pending",
+        "email": "Not specified",
+        "resolved_by": null,
+        "resolved_at": null
+    },
+    {
+        "id": "issue_3_whatsapp",
+        "source": "whatsapp",
+        "from": "whatsapp:+916360826605",
+        "subject": "WhatsApp Message",
+        "body": "Defect there",
+        "category": "Genral Enquiry",
+        "timestamp": "2025-04-12T01:37:16.921277",
+        "status": "resolved",
+        "email": "Not specified",
+        "resolved_by": "emp123",
+        "resolved_at": "2025-04-12T01:37:21.714211"
+    },
+    {
+        "id": "issue_5_whatsapp",
+        "source": "whatsapp",
+        "from": "whatsapp:+916360826605",
+        "subject": "WhatsApp Message",
+        "body": "Track my order",
+        "category": "Order Related",
+        "timestamp": "2025-04-12T01:38:02.730324",
+        "status": "resolved",
+        "email": "Not specified",
+        "resolved_by": "emp123",
+        "resolved_at": "2025-04-12T03:28:32.927382"
+    },
+    {
+        "id": "issue_7_whatsapp",
+        "source": "whatsapp",
+        "from": "whatsapp:+916360826605",
+        "subject": "WhatsApp Message",
+        "body": "Billing issues",
+        "category": "Payment Issue",
+        "timestamp": "2025-04-12T01:38:47.834875",
+        "status": "resolved",
+        "email": "Not specified",
+        "resolved_by": "emp123",
+        "resolved_at": "2025-04-12T02:52:04.563173"
+    },
+    {
+        "id": "issue_7_whatsapp",
+        "source": "whatsapp",
+        "from": "whatsapp:+916360826605",
+        "subject": "WhatsApp Message",
+        "body": "Hey",
+        "category": "General Inquiry",
+        "timestamp": "2025-04-12T06:27:35.347383",
+        "status": "pending",
+        "email": "Not specified",
+        "resolved_by": null,
+        "resolved_at": null
+    },
+    {
+        "id": "issue_8_whatsapp",
+        "source": "whatsapp",
+        "from": "whatsapp:+916360826605",
+        "subject": "WhatsApp Message",
+        "body": "I see blank screen please help me out",
+        "category": "Technical Glitch",
+        "timestamp": "2025-04-12T06:35:02.923048",
+        "status": "pending",
+        "email": "Not specified",
+        "resolved_by": null,
+        "resolved_at": null
+    }
+]

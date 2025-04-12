@@ -1,0 +1,11 @@
+[
+    {
+        "source": "email",
+        "from": "Darshil <darshil.sisodiya@gmail.com>",
+        "subject": "Poor design",
+        "body": "There's a lot of delay while opening the website\r\n",
+        "category": "Order Related",
+        "email": "darshilsisodiya6@gmail.com",
+        "id": "issue_1_email"
+    }
+]

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-shield-alt"></i>
+            <span>Audit System</span>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="/dashboard"><i class="fas fa-clipboard-list"></i> Issues</a></li>
+                <li><a href="/dashboard" id="email-tab"><i class="fas fa-envelope"></i> Email Issues</a></li>
+                <li><a href="/dashboard" id="whatsapp-tab"><i class="fab fa-whatsapp"></i> WhatsApp Issues</a></li>
+                <li><a href="/analytics"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+            
+                <li class="logout"><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <h1>Raised Issues</h1>
+                <div class="user-info">
+                    <span>Welcome, Admin</span>
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="filters">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search issues...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-options">
+                    <select id="source-filter">
+                        <option value="all">All Sources</option>
+                        <option value="email">Email</option>
+                        <option value="whatsapp">WhatsApp</option>
+                    </select>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="Payment Issue">Payment Issue</option>
+                        <option value="Login Problem">Login Problem</option>
+                        <option value="Account Management">Account Management</option>
+                        <option value="Technical Glitch">Technical Glitch</option>
+                        <option value="Order Related">Order Related</option>
+                        <option value="Access & Permissions">Access & Permissions</option>
+                        <option value="Product Inquiry">Product Inquiry</option>
+                        <option value="Feedback & Suggestions">Feedback & Suggestions</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Billing Issue">Billing Issue</option>
+                        <option value="General Inquiry">General Issues</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="issues-table" id="issues-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-filter"></i> Source</th>
+                            <th><i class="fas fa-user"></i> From</th>
+                            <th><i class="fas fa-envelope"></i> Subject</th>
+                            <th><i class="fas fa-align-left"></i> Body</th>
+                            <th><i class="fas fa-tag"></i> Category</th>
+                            <th><i class="fas fa-tasks"></i> Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for viewing issue details -->
+    <div id="issue-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Issue Details</h2>
+            <div class="issue-details">
+                <div class="detail-row">
+                    <strong>Source:</strong>
+                    <span id="modal-source"></span>
+                </div>
+                <div class="detail-row">
+                    <strong>From:</strong>
+                    <span id="modal-from"></span>
+                </div>
+                <div class="detail-row" id="subject-row">
+                    <strong>Subject:</strong>
+                    <span id="modal-subject"></span>
+                </div>
+                <div class="detail-row">
+                    <strong>Category:</strong>
+                    <span id="modal-category"></span>
+                </div>
+                <div class="detail-row full">
+                    <strong>Body:</strong>
+                    <div id="modal-body"></div>
+                </div>
+                <div class="detail-row">
+                    <strong>Received:</strong>
+                    <span id="modal-timestamp"></span>
+                </div>
+                <div class="detail-row">
+                    <strong>To: </strong>
+                    <span id="modal-to"></span>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="modal-resolve" class="btn-resolve-full">Mark as Resolved</button>
+                <button id="modal-delete" class="btn-delete-full">Delete Issue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

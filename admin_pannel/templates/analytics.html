@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Analytics</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-shield-alt"></i>
+            <span>Audit System</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/dashboard"><i class="fas fa-clipboard-list"></i> Issues</a></li>
+                <li><a href="#" id="email-tab"><i class="fas fa-envelope"></i> Email Issues</a></li>
+                <li><a href="#" id="whatsapp-tab"><i class="fab fa-whatsapp"></i> WhatsApp Issues</a></li>
+                <li class="active"><a href="/analytics"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li class="logout"><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <h1>Analytics Dashboard</h1>
+                <div class="user-info">
+                    <span>Welcome, Admin</span>
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="analytics-filters">
+                <div class="filter-options">
+                    <select id="source-filter">
+                        <option value="all">All Sources</option>
+                        <option value="email">Email</option>
+                        <option value="whatsapp">WhatsApp</option>
+                    </select>
+                    <select id="time-filter">
+                        <option value="all">All Time</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h2><i class="fas fa-tag"></i> Issues by Category</h2>
+                    <canvas id="category-chart" class="chart"></canvas>
+                </div>
+                
+                <div class="chart-card">
+                    <h2><i class="fas fa-tasks"></i> Issue Resolution Status</h2>
+                    <canvas id="status-chart" class="chart"></canvas>
+                </div>
+            </div>
+
+            <div class="analytics-summary">
+                <div class="summary-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <div class="summary-content">
+                        <h3>Total Issues</h3>
+                        <p id="total-issues">Loading...</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div class="summary-content">
+                        <h3>Resolved Issues</h3>
+                        <p id="resolved-issues">Loading...</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="summary-content">
+                        <h3>Pending Issues</h3>
+                        <p id="pending-issues">Loading...</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fas fa-bolt"></i>
+                    <div class="summary-content">
+                        <h3>Resolution Rate</h3>
+                        <p id="resolution-rate">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/chart.js"></script> <!-- Local Chart.js from npm -->
+    <script src="/static/analytics.js"></script>
+</body>
+</html>
