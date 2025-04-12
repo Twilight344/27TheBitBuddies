@@ -25,4 +25,12 @@ This project is a centralized query management system that receives queries thro
 
 ---
 ## 🚀 To run the project 
+first install the required modules
+` pip install -r requirements.txt.`
+then,
 `cd admin_pannel`
+`python app.py`
+Then in a new terminal ( make sure you are in root directory )
+`python email_reader.py`
+Create an other new terminal ( again make sure you are in root directroy )
+`python whatsapp_server.py`
